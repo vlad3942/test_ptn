@@ -106,9 +106,9 @@ kernel = unit+5*(unit - gaus)
 img_gaus = Image.open(r"gaus.jpg")
 
 r_arr, g_arr, b_arr = get_array(img_gaus)
-r_c = conv2d(r_arr, kernel)
-g_c = conv2d(g_arr, kernel)
-b_c = conv2d(b_arr, kernel)
+r_c = conv(r_arr, kernel)
+g_c = conv(g_arr, kernel)
+b_c = conv(b_arr, kernel)
 
 
 img_sharpness = create_img(r_c, g_c, b_c)
@@ -125,9 +125,9 @@ img_gaus = Image.open(r"gaus.jpg")
 sharpness = get_emboss_kernel()
 
 r_arr, g_arr, b_arr = get_array(img_gaus)
-r_c = conv2d(r_arr, sharpness)
-g_c = conv2d(g_arr, sharpness)
-b_c = conv2d(b_arr, sharpness)
+r_c = conv(r_arr, sharpness)
+g_c = conv(g_arr, sharpness)
+b_c = conv(b_arr, sharpness)
 
 
 img_sharpness = create_img(r_c, g_c, b_c)
